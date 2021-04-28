@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <app-header></app-header>
   <div class="content">
     <router-outlet></router-outlet>
@@ -6,4 +6,55 @@
   <footer>
     footer
   </footer>
-</div>
+</div> -->
+
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav [opened]="isShowing">
+    <mat-nav-list>
+      <a *ngFor="let route of navLinks" mat-list-item [routerLink]="route.path" (click)="sidenav.toggle()">
+        <mat-icon>{{route.icon}}</mat-icon>
+        {{route.label}}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-button (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="container">
+      <app-header></app-header>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+      <footer>
+        footer
+      </footer>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- <mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <a *ngFor="let route of navLinks" mat-list-item [routerLink]="route.path" (click)="sidenav.toggle()">
+        <mat-icon>{{route.icon}}</mat-icon>
+        {{route.label}}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+      <mat-toolbar color="primary">
+        <button mat-icon-button aria-label="Menu" (click)="sidenav.open()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </mat-toolbar>
+      <div class="container">
+        <app-header></app-header>
+        <div class="content">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
