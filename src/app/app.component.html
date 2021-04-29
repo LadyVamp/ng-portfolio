@@ -1,60 +1,25 @@
-<!-- <div class="container">
-  <app-header></app-header>
-  <div class="content">
-    <router-outlet></router-outlet>
-  </div>
-  <footer>
-    footer
-  </footer>
-</div> -->
-
-<mat-sidenav-container class="container">
-  <mat-sidenav #sidenav [opened]="isShowing">
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a *ngFor="let route of navLinks" mat-list-item [routerLink]="route.path" (click)="sidenav.toggle()">
-        <mat-icon>{{route.icon}}</mat-icon>
-        {{route.label}}
-      </a>
+      <a mat-list-item [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
+      <a mat-list-item [routerLink]="['/projects']" routerLinkActive="router-link-active">Projects</a>
+      <a mat-list-item [routerLink]="['/resume']" routerLinkActive="router-link-active">Resume</a>
+      <a mat-list-item [routerLink]="['/contacts']" routerLinkActive="router-link-active">Contacts</a>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <button mat-button (click)="toggleSidenav()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <div class="container">
-      <app-header></app-header>
-      <div class="content">
-        <router-outlet></router-outlet>
-      </div>
-      <footer>
-        footer
-      </footer>
+  <mat-sidenav-content class="wrapper">
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>{{title}}</span>
+    </mat-toolbar>
+    <div class="content">
+      <router-outlet></router-outlet>
     </div>
+    <footer>Sticky footer</footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
-
-<!-- <mat-sidenav-container>
-  <mat-sidenav #sidenav>
-    <mat-nav-list>
-      <a *ngFor="let route of navLinks" mat-list-item [routerLink]="route.path" (click)="sidenav.toggle()">
-        <mat-icon>{{route.icon}}</mat-icon>
-        {{route.label}}
-      </a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <div style="height: 88vh;">
-      <mat-toolbar color="primary">
-        <button mat-icon-button aria-label="Menu" (click)="sidenav.open()">
-          <mat-icon>menu</mat-icon>
-        </button>
-      </mat-toolbar>
-      <div class="container">
-        <app-header></app-header>
-        <div class="content">
-          <router-outlet></router-outlet>
-        </div>
-      </div>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container> -->

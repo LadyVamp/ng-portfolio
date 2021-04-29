@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map, filter } from 'rxjs/operators';
+import { Router, NavigationStart } from '@angular/router';
+import { MatDrawerContainer } from '@angular/material/sidenav';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -6,41 +12,30 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-portfolio';
+  isHandset = false;
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => {
+        if (result.matches) {
+          this.isHandset = true;
+          return true;
+        } else {
+          this.isHandset = false;
+          return false;
+        }
+      })
+    );
+  @ViewChild('drawer', { static: true }) drawer: MatDrawerContainer;
 
-  isShowing: boolean = false;
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
+    this.router.events.pipe(filter(event => event instanceof NavigationStart))
+      .subscribe(() => {
+        if (this.isHandset) {
+          this.drawer.close();
+          console.log('closed');
+        }
+      });
 
-  toggleSidenav() {
-    this.isShowing = !this.isShowing;
   }
-
-  callMethods() {
-    this.toggleSidenav();
-  }
-
-  navLinks: any[];
-
-  constructor() {
-    this.navLinks = [
-      {
-        label: 'Home',
-        path: './home',
-        icon: 'home'
-      }, {
-        label: 'Resume',
-        path: './resume',
-        icon: 'person_pin'
-      }, {
-        label: 'Projects',
-        path: './projects',
-        icon: 'folder'
-      }, {
-        label: 'Contacts',
-        path: './contacts',
-        icon: 'email'
-      },
-    ];
-  }
-
-
 
 }
