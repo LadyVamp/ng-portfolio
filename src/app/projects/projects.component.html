@@ -1,1 +1,17 @@
-<p>projects works!</p>
+<h1>Projects</h1>
+<div class="flex-container">
+  <mat-card *ngFor="let project of projects">
+    <img mat-card-image [src]="project.imageUrl" alt="Photo of {{project.title}}">
+    <mat-divider></mat-divider>
+    <mat-card-header>
+      <mat-card-title>{{project.title}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{project.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a mat-raised-button href="{{project.repoUrl}}" target="_blank">Code</a>
+      <a mat-raised-button href="{{project.demoUrl}}" target="_blank">Demo</a>
+    </mat-card-actions>
+  </mat-card>
+</div>
