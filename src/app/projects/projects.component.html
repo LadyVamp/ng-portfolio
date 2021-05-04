@@ -1,8 +1,8 @@
 <h1>Projects</h1>
 <div class="flex-container">
   <mat-card *ngFor="let project of projects">
-    <img mat-card-image [src]="project.imageUrl" alt="Photo of {{project.title}}">
-    <mat-divider></mat-divider>
+    <a href="{{project.demoUrl}}" target="_blank">
+      <img mat-card-image [src]="project.imageUrl" alt=""></a>
     <mat-card-header>
       <mat-card-title>{{project.title}}</mat-card-title>
     </mat-card-header>
