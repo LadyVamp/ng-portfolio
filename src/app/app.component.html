@@ -10,12 +10,22 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="wrapper">
-    <mat-toolbar color="primary">
+    <mat-toolbar fxLayoutAlign="space-between center">
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span>{{title}}</span>
+      <div>
+        <button mat-icon-button [style.color]="currentTheme === 'default' ? '#f3c300' : 'white'"
+          (click)="onSetTheme('default')" matTooltip="Светлая тема">
+          <mat-icon>brightness_5</mat-icon>
+        </button>
+        <button mat-icon-button [style.color]="currentTheme === 'dark' ? '#f3c300' : 'white'"
+          (click)="onSetTheme('dark')" matTooltip="Темная тема">
+          <mat-icon>brightness_3</mat-icon>
+        </button>
+      </div>
     </mat-toolbar>
     <div class="content">
       <router-outlet></router-outlet>

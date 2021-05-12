@@ -1,9 +1,10 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, HostBinding } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, filter } from 'rxjs/operators';
 import { Router, NavigationStart } from '@angular/router';
 import { MatDrawerContainer } from '@angular/material/sidenav';
+import { OverlayContainer } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,10 @@ export class AppComponent {
     );
   @ViewChild('drawer', { static: true }) drawer: MatDrawerContainer;
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
+  currentTheme = '';
+  @HostBinding('class') componentCssClass: string;
+
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router, public overlayContainer: OverlayContainer) {
     this.router.events.pipe(filter(event => event instanceof NavigationStart))
       .subscribe(() => {
         if (this.isHandset) {
@@ -35,7 +39,13 @@ export class AppComponent {
           console.log('closed');
         }
       });
+    this.onSetTheme('default');
+  }
 
+  onSetTheme(theme: string): void {
+    this.currentTheme = theme;
+    this.overlayContainer.getContainerElement().classList.add(theme);
+    this.componentCssClass = theme;
   }
 
 }

@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic&amp;subset=latin-ext");
+
+@import "~@angular/material/theming";
+
+// https://colorscheme.ru/#3G31TzUuzw0w0
+
+.default h1,
+.dark h1 {
+  font-weight: 600;
+}
+
+$default-theme: mat-light-theme(mat-palette($mat-blue), mat-palette($mat-yellow), mat-palette($mat-red));
+
+.default {
+  @include angular-material-theme($default-theme);
+
+  $primary: #0d46a1;
+  $secondary: #4178d0;
+  $accent: #f3c300;
+  $warn: #f36200;
+
+  a {
+    color: $secondary;
+  }
+  a:hover {
+    color: $accent;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $primary;
+  }
+  .mat-toolbar {
+    background-color: $primary;
+    color: white;
+  }
+  .mat-raised-button.mat-primary {
+    background-color: $primary;
+  }
+  .mat-icon-button.mat-accent {
+    color: $accent;
+  }
+}
+
+/*
+  Dark theme
+*/
+$dark-theme: mat-dark-theme(mat-palette($mat-indigo), mat-palette($mat-purple), mat-palette($mat-red));
+
+.dark {
+  @include angular-material-theme($dark-theme);
+
+  $primary: #0d46a1;
+  $secondary: #4178d0;
+  $accent: #f3c300;
+  $warn: #f36200;
+
+  a {
+    color: $secondary;
+  }
+  a:hover {
+    color: $accent;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $secondary;
+  }
+  .mat-toolbar {
+    background-color: $primary;
+    color: white;
+  }
+  .mat-raised-button.mat-primary {
+    background-color: $primary;
+  }
+  .mat-raised-button.mat-accent {
+    background-color: $accent;
+  }
+  .mat-icon-button.mat-accent {
+    color: $accent;
+  }
+}
