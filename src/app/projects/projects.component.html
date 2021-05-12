@@ -1,5 +1,5 @@
 <h1>Projects</h1>
-<div class="flex-container">
+<div fxLayout="row wrap">
   <mat-card *ngFor="let project of projects">
     <a href="{{project.demoUrl}}" target="_blank">
       <img mat-card-image [src]="project.imageUrl" alt=""></a>

@@ -1,11 +1,11 @@
-<div class="container">
-  <div class="dates">
+<div fxLayout="row" fxLayoutAlign="start start">
+  <div fxFlex="15" fxHide.xs fxFlex.lt-lg="25">
     <p>{{dates}}</p>
   </div>
-  <div class="info">
-    <div class="logo">
-      <img src="{{logo}}" alt="">
-      <h2>{{title}}</h2>
+  <div>
+    <div fxLayout="row" fxLayoutGap="10px">
+      <img class="logo" src="{{logo}}" alt="">
+      <h2 class="title">{{title}}</h2>
     </div>
     <h3>{{subtitle}}</h3>
     <ng-content></ng-content>
