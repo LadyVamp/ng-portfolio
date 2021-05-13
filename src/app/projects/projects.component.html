@@ -1,4 +1,4 @@
-<h1>Projects</h1>
+<h1>Проекты</h1>
 <div fxLayout="row wrap">
   <mat-card *ngFor="let project of projects">
     <a href="{{project.demoUrl}}" target="_blank">
@@ -9,9 +9,13 @@
     <mat-card-content>
       <p>{{project.description}}</p>
     </mat-card-content>
-    <mat-card-actions>
-      <a mat-raised-button href="{{project.repoUrl}}" target="_blank">Code</a>
-      <a mat-raised-button href="{{project.demoUrl}}" target="_blank">Demo</a>
+    <mat-card-actions fxLayoutAlign="space-between center">
+      <a mat-raised-button href="{{project.repoUrl}}" target="_blank">
+        <fa-icon [icon]="faGithub"></fa-icon> Code
+      </a>
+      <a mat-raised-button href="{{project.demoUrl}}" target="_blank">
+        <fa-icon [icon]="faGlobe"></fa-icon> Demo
+      </a>
     </mat-card-actions>
   </mat-card>
 </div>

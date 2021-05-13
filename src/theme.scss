@@ -27,6 +27,12 @@ $default-theme: mat-light-theme(mat-palette($mat-blue), mat-palette($mat-yellow)
     color: $accent;
   }
 
+  .mat-icon-button {
+    &:hover {
+      color: $secondary;
+    }
+  }
+
   h1,
   h2,
   h3,
