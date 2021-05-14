@@ -8,6 +8,7 @@ export interface Project {
   imageUrl: string;
   demoUrl: string;
   repoUrl: string;
+  type: string;
 }
 
 @Component({
@@ -19,19 +20,33 @@ export class ProjectsComponent implements OnInit {
   faGithub = faGithub;
   faGlobe = faGlobe;
 
-  projects: Project[] = [
-    { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/' },
-    { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/' },
-    { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/' },
-    { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/' },
-    { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/' },
-    { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/' },
-    { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/' },
-  ];
+  projects: Project[];
+  types = ['All', 'Angular', 'JavaScript', 'Other'];
 
   constructor() { }
 
   ngOnInit(): void {
+    this.getProjects();
+  }
+
+  getProjects(): void {
+    this.projects = [
+      { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/', type: 'Angular' },
+      { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/', type: 'Angular' },
+      { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/', type: 'JavaScript' },
+      { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/', type: 'JavaScript' },
+      { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/', type: 'Other' },
+    ];
+  }
+
+  applyFilter(type: string) {
+    console.log(type, 'projects %o', this.projects);
+    this.getProjects();
+    if (type === 'All') {
+      return;
+    } else {
+      this.projects = this.projects.filter(t => t.type === type);
+    }
   }
 
 }

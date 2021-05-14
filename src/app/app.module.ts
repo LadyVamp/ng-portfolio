@@ -28,7 +28,7 @@ import { ContentHeaderComponent } from './shared/components/content-header/conte
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    FontAwesomeModule 
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

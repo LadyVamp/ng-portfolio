@@ -1,4 +1,7 @@
 <h1>Проекты</h1>
+<button mat-button *ngFor="let type of types" (click)="applyFilter(type)">
+  {{type}}
+</button>
 <div fxLayout="row wrap">
   <mat-card *ngFor="let project of projects">
     <a href="{{project.demoUrl}}" target="_blank">
@@ -8,6 +11,7 @@
     </mat-card-header>
     <mat-card-content>
       <p>{{project.description}}</p>
+      <p>{{project.type}}</p>
     </mat-card-content>
     <mat-card-actions fxLayoutAlign="space-between center">
       <a mat-raised-button href="{{project.repoUrl}}" target="_blank">
