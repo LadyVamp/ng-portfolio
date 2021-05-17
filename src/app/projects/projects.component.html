@@ -1,9 +1,12 @@
 <h1>Проекты</h1>
-<button mat-button *ngFor="let type of types" (click)="applyFilter(type)">
-  {{type}}
-</button>
+<div fxLayoutAlign="start center" class="btn-group">
+  <button mat-raised-button *ngFor="let type of types" (click)="applyFilter(type)"
+    [ngClass]="selectedType === type ? 'mat-accent' : ''">
+    {{type}}
+  </button>
+</div>
 <div fxLayout="row wrap">
-  <mat-card *ngFor="let project of projects">
+  <mat-card *ngFor="let project of filteredProjects">
     <a href="{{project.demoUrl}}" target="_blank">
       <img mat-card-image [src]="project.imageUrl" alt=""></a>
     <mat-card-header>

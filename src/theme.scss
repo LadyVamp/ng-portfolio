@@ -48,8 +48,19 @@ $default-theme: mat-light-theme(mat-palette($mat-blue), mat-palette($mat-yellow)
   .mat-raised-button.mat-primary {
     background-color: $primary;
   }
+  .mat-raised-button.mat-accent {
+    background-color: $accent;
+  }
   .mat-icon-button.mat-accent {
     color: $accent;
+  }
+  .mat-list-base .router-link-active {
+    &:before {
+      background-color: $primary;
+    }
+  }
+  .mat-list-base .mat-list-item {
+    color: $primary;
   }
 }
 
@@ -92,5 +103,10 @@ $dark-theme: mat-dark-theme(mat-palette($mat-indigo), mat-palette($mat-purple), 
   }
   .mat-icon-button.mat-accent {
     color: $accent;
+  }
+  .mat-list-base .router-link-active {
+    &:before {
+      background-color: $accent;
+    }
   }
 }
