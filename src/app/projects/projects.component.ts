@@ -1,15 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-
-export interface Project {
-  title: string;
-  description: string;
-  imageUrl: string;
-  demoUrl: string;
-  repoUrl: string;
-  type: string;
-}
+import { Project } from '@shared/model/model';
+import { ProjectService } from '@services/project.service'
 
 @Component({
   selector: 'app-projects',
@@ -23,30 +16,22 @@ export class ProjectsComponent implements OnInit {
   projects: Project[];
   types = ['All', 'Angular', 'JavaScript', 'Other'];
 
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
-    this.getProjects();
+    this.loadData();
   }
 
-  getProjects(): void {
-    this.projects = [
-      { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/', type: 'Angular' },
-      { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/', type: 'Angular' },
-      { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/', type: 'JavaScript' },
-      { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/', type: 'JavaScript' },
-      { title: 'Project title', description: 'Project description', imageUrl: '../../assets/img/placeholder-image.png', demoUrl: 'https://stackblitz.com/', repoUrl: 'https://github.com/', type: 'Other' },
-    ];
+  loadData(): void {
+    this.projectService.getProjects().pipe()
+      .subscribe(res => {
+        console.log(res);
+        this.projects = res.data;
+      })
   }
 
   applyFilter(type: string) {
-    console.log(type, 'projects %o', this.projects);
-    this.getProjects();
-    if (type === 'All') {
-      return;
-    } else {
-      this.projects = this.projects.filter(t => t.type === type);
-    }
+    console.log(type);
   }
 
 }
