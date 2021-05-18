@@ -62,6 +62,10 @@ $default-theme: mat-light-theme(mat-palette($mat-blue), mat-palette($mat-yellow)
   .mat-list-base .mat-list-item {
     color: $primary;
   }
+
+  .snackbar-error {
+    background-color: $warn;
+  }
 }
 
 /*
@@ -108,5 +112,8 @@ $dark-theme: mat-dark-theme(mat-palette($mat-indigo), mat-palette($mat-purple), 
     &:before {
       background-color: $accent;
     }
+  }
+  .snackbar-error {
+    background-color: $warn;
   }
 }
