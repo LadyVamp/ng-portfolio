@@ -5,6 +5,7 @@ import { map, filter } from 'rxjs/operators';
 import { Router, NavigationStart } from '@angular/router';
 import { MatDrawerContainer } from '@angular/material/sidenav';
 import { OverlayContainer } from '@angular/cdk/overlay';
+import { version } from '../../package.json';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { OverlayContainer } from '@angular/cdk/overlay';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  version: string = version;
   title = 'ng-portfolio';
   isHandset = false;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
