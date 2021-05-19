@@ -3,7 +3,7 @@
     {
       "title": "title 1",
       "description": "description 1",
-      "imageUrl": "assets/img/placeholder-image.png",
+      "imageUrl": "/assets/img/placeholder-image.png",
       "demoUrl": "https://stackblitz.com/",
       "repoUrl": "https://github.com/",
       "type": "Angular"
@@ -11,7 +11,7 @@
     {
       "title": "title 2",
       "description": "description 2",
-      "imageUrl": "assets/img/placeholder-image.png",
+      "imageUrl": "/assets/img/placeholder-image.png",
       "demoUrl": "https://stackblitz.com/",
       "repoUrl": "https://github.com/",
       "type": "Angular"
@@ -19,7 +19,7 @@
     {
       "title": "title 3",
       "description": "description 3",
-      "imageUrl": "assets/img/placeholder-image.png",
+      "imageUrl": "/assets/img/placeholder-image.png",
       "demoUrl": "https://stackblitz.com/",
       "repoUrl": "https://github.com/",
       "type": "JavaScript"
@@ -27,7 +27,7 @@
     {
       "title": "title 4",
       "description": "description 4",
-      "imageUrl": "assets/img/placeholder-image.png",
+      "imageUrl": "/assets/img/placeholder-image.png",
       "demoUrl": "https://stackblitz.com/",
       "repoUrl": "https://github.com/",
       "type": "JavaScript"
@@ -35,7 +35,7 @@
     {
       "title": "title 5",
       "description": "description 5",
-      "imageUrl": "assets/img/placeholder-image.png",
+      "imageUrl": "/assets/img/placeholder-image.png",
       "demoUrl": "https://stackblitz.com/",
       "repoUrl": "https://github.com/",
       "type": "Other"
