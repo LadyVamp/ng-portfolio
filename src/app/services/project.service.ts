@@ -13,8 +13,7 @@ export class ProjectService {
   constructor(private http: HttpClient, private snackBar: SnackbarService) { }
 
   getProjects(): Observable<DataList<Project>> {
-    // return this.http.get<DataList<Project>>('../../assets/projects/projects.json')
-    return this.http.get<DataList<Project>>('./assets/projects/projects.json')
+    return this.http.get<DataList<Project>>('./assets/json/projects.json')
       .pipe(
         retry(1),
         catchError(this.handleError.bind(this))

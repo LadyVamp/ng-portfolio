@@ -6,7 +6,7 @@
   </button>
 </div>
 <div fxLayout="row wrap">
-  <mat-card *ngFor="let project of filteredProjects">
+  <mat-card *ngFor="let project of filteredProjects" fxLayout="column" fxLayoutAlign="space-between">
     <a href="{{project.demoUrl}}" target="_blank">
       <img mat-card-image [src]="project.imageUrl" alt=""></a>
     <mat-card-header>
