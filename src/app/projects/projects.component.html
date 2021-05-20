@@ -1,5 +1,7 @@
 <h1>Проекты</h1>
 <div fxLayoutAlign="start center" class="btn-group">
+  <button mat-raised-button (click)="applyFilter('All')"
+    [ngClass]="selectedType === 'All' ? 'mat-accent' : ''">Все</button>
   <button mat-raised-button *ngFor="let type of types" (click)="applyFilter(type)"
     [ngClass]="selectedType === type ? 'mat-accent' : ''">
     {{type}}

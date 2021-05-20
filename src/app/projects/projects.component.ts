@@ -14,7 +14,7 @@ export class ProjectsComponent implements OnInit {
   faGlobe = faGlobe;
 
   projects: Project[];
-  types = ['All', 'Angular', 'JavaScript', 'Other'];
+  types: string[];
   filteredProjects: Project[];
   selectedType = 'All';
 
@@ -28,6 +28,7 @@ export class ProjectsComponent implements OnInit {
     this.projectService.getProjects().pipe()
       .subscribe(res => {
         this.projects = this.filteredProjects = res.data;
+        this.types = this.getUniqueTypes();
       });
   }
 
@@ -40,6 +41,11 @@ export class ProjectsComponent implements OnInit {
     } else {
       this.filteredProjects = this.filteredProjects.filter(item => item.type === type);
     }
+  }
+
+  getUniqueTypes(): string[] {
+    const types = this.projects.map(x => x.type);
+    return Array.from(new Set(types)).sort();
   }
 
 }
