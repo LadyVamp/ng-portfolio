@@ -17,6 +17,7 @@ export class ProjectsComponent implements OnInit {
   types: string[];
   filteredProjects: Project[];
   selectedType = 'All';
+  isLoading = false;
 
   constructor(private projectService: ProjectService) { }
 
@@ -25,10 +26,12 @@ export class ProjectsComponent implements OnInit {
   }
 
   loadData(): void {
+    this.isLoading = true;
     this.projectService.getProjects().pipe()
       .subscribe(res => {
         this.projects = this.filteredProjects = res.data;
         this.types = this.getUniqueTypes();
+        this.isLoading = false;
       });
   }
 

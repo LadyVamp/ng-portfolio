@@ -1,30 +1,35 @@
 <h1>Проекты</h1>
-<div fxLayoutAlign="start center" class="btn-group">
-  <button mat-raised-button (click)="applyFilter('All')"
-    [ngClass]="selectedType === 'All' ? 'mat-accent' : ''">Все</button>
-  <button mat-raised-button *ngFor="let type of types" (click)="applyFilter(type)"
-    [ngClass]="selectedType === type ? 'mat-accent' : ''">
-    {{type}}
-  </button>
-</div>
-<div fxLayout="row wrap">
-  <mat-card *ngFor="let project of filteredProjects" fxLayout="column" fxLayoutAlign="space-between">
-    <a href="{{project.demoUrl}}" target="_blank">
-      <img mat-card-image [src]="project.imageUrl" alt=""></a>
-    <mat-card-header>
-      <mat-card-title>{{project.title}}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>{{project.description}}</p>
-      <p>{{project.type}}</p>
-    </mat-card-content>
-    <mat-card-actions fxLayoutAlign="space-between center">
-      <a mat-raised-button href="{{project.repoUrl}}" target="_blank">
-        <fa-icon [icon]="faGithub"></fa-icon> Code
-      </a>
-      <a mat-raised-button href="{{project.demoUrl}}" target="_blank">
-        <fa-icon [icon]="faGlobe"></fa-icon> Demo
-      </a>
-    </mat-card-actions>
-  </mat-card>
-</div>
+<ng-container *ngIf="!isLoading; else spinner">
+  <div fxLayoutAlign="start center" class="btn-group">
+    <button mat-raised-button (click)="applyFilter('All')"
+      [ngClass]="selectedType === 'All' ? 'mat-accent' : ''">Все</button>
+    <button mat-raised-button *ngFor="let type of types" (click)="applyFilter(type)"
+      [ngClass]="selectedType === type ? 'mat-accent' : ''">
+      {{type}}
+    </button>
+  </div>
+  <div fxLayout="row wrap">
+    <mat-card *ngFor="let project of filteredProjects" fxLayout="column" fxLayoutAlign="space-between">
+      <a href="{{project.demoUrl}}" target="_blank">
+        <img mat-card-image [src]="project.imageUrl" alt=""></a>
+      <mat-card-header>
+        <mat-card-title>{{project.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{project.description}}</p>
+        <p>{{project.type}}</p>
+      </mat-card-content>
+      <mat-card-actions fxLayoutAlign="space-between center">
+        <a mat-raised-button href="{{project.repoUrl}}" target="_blank">
+          <fa-icon [icon]="faGithub"></fa-icon> Code
+        </a>
+        <a mat-raised-button href="{{project.demoUrl}}" target="_blank">
+          <fa-icon [icon]="faGlobe"></fa-icon> Demo
+        </a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</ng-container>
+<ng-template #spinner>
+  <mat-spinner></mat-spinner>
+</ng-template>
