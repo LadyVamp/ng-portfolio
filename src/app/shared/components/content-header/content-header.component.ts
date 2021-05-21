@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ContentChild, TemplateRef, ElementRef } from '@angular/core';
 
 @Component({
-  selector: 'content-header',
+  selector: 'app-content-header',
   templateUrl: './content-header.component.html',
   styleUrls: ['./content-header.component.scss']
 })
@@ -13,7 +13,7 @@ export class ContentHeaderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
 }

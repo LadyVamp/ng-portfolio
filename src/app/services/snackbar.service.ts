@@ -7,11 +7,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class SnackbarService {
 
   constructor(
-    private _snackBar: MatSnackBar) {
+    private snackBar: MatSnackBar) {
   }
 
   error(message: string) {
-    return this._snackBar.open(message, 'OK', {
+    return this.snackBar.open(message, 'OK', {
       panelClass: ['snackbar-error'],
       horizontalPosition: 'right',
       verticalPosition: 'top',
