@@ -5,15 +5,15 @@
 
 // https://colorscheme.ru/#3G31TzUuzw0w0
 
-.default h1,
-.dark h1 {
+.light-theme h1,
+.dark-theme h1 {
   font-weight: 600;
 }
 
-$default-theme: mat-light-theme(mat-palette($mat-blue), mat-palette($mat-yellow), mat-palette($mat-red));
+$light-theme: mat-light-theme(mat-palette($mat-blue), mat-palette($mat-yellow), mat-palette($mat-red));
 
-.default {
-  @include angular-material-theme($default-theme);
+.light-theme {
+  @include angular-material-theme($light-theme);
 
   $primary: #0d46a1;
   $secondary: #4178d0;
@@ -29,7 +29,7 @@ $default-theme: mat-light-theme(mat-palette($mat-blue), mat-palette($mat-yellow)
 
   .mat-icon-button {
     &:hover {
-      color: $secondary;
+      color: $accent;
     }
   }
 
@@ -73,7 +73,7 @@ $default-theme: mat-light-theme(mat-palette($mat-blue), mat-palette($mat-yellow)
 */
 $dark-theme: mat-dark-theme(mat-palette($mat-indigo), mat-palette($mat-purple), mat-palette($mat-red));
 
-.dark {
+.dark-theme {
   @include angular-material-theme($dark-theme);
 
   $primary: #0d46a1;
@@ -86,6 +86,11 @@ $dark-theme: mat-dark-theme(mat-palette($mat-indigo), mat-palette($mat-purple), 
   }
   a:hover {
     color: $accent;
+  }
+  .mat-icon-button {
+    &:hover {
+      color: $accent;
+    }
   }
   h1,
   h2,

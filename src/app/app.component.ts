@@ -41,13 +41,15 @@ export class AppComponent {
           console.log('closed');
         }
       });
-    this.onSetTheme('default');
+
+    localStorage.getItem('theme') === 'dark-theme' ? this.setTheme('dark-theme') : this.setTheme('light-theme');
   }
 
-  onSetTheme(theme: string): void {
+  setTheme(theme: string): void {
     this.currentTheme = theme;
     this.overlayContainer.getContainerElement().classList.add(theme);
     this.componentCssClass = theme;
+    localStorage.setItem('theme', this.currentTheme);
   }
 
 }

@@ -17,13 +17,11 @@
       </button>
       <span>{{title}}</span>
       <div>
-        <button mat-icon-button [style.color]="currentTheme === 'default' ? '#f3c300' : 'white'"
-          (click)="onSetTheme('default')" matTooltip="Светлая тема">
-          <mat-icon>brightness_5</mat-icon>
-        </button>
-        <button mat-icon-button [style.color]="currentTheme === 'dark' ? '#f3c300' : 'white'"
-          (click)="onSetTheme('dark')" matTooltip="Темная тема">
-          <mat-icon>brightness_3</mat-icon>
+        <button mat-icon-button
+          (click)="currentTheme === 'light-theme' ? setTheme('dark-theme') : setTheme('light-theme')"
+          matTooltip="Переключить светлую/темную тему">
+          <mat-icon *ngIf="currentTheme === 'light-theme'">brightness_5</mat-icon>
+          <mat-icon *ngIf="currentTheme === 'dark-theme'">brightness_3</mat-icon>
         </button>
       </div>
     </mat-toolbar>
