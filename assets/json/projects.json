@@ -3,7 +3,7 @@
     {
       "title": "ladyvamp.github.io",
       "description": "Прошлая версия портфолио",
-      "imageUrl": "./assets/img/projects-covers/ladyvamp.github.io.png",
+      "imageUrl": "./assets/img/projects/ladyvamp.github.io.png",
       "demoUrl": "https://ladyvamp.github.io/",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io",
       "type": "Other"
@@ -11,7 +11,7 @@
     {
       "title": "github-angular-track-filter",
       "description": "База треков моих походов",
-      "imageUrl": "./assets/img/projects-covers/github-angular-track-filter.png",
+      "imageUrl": "./assets/img/projects/github-angular-track-filter.png",
       "demoUrl": "https://github-angular-track-filter.stackblitz.io/",
       "repoUrl": "https://github.com/LadyVamp/github-angular-track-filter",
       "type": "Angular"
@@ -19,7 +19,7 @@
     {
       "title": "angular-api-ex",
       "description": "Github REST API",
-      "imageUrl": "./assets/img/projects-covers/angular-api-ex.png",
+      "imageUrl": "./assets/img/projects/angular-api-ex.png",
       "demoUrl": "https://angular-api-ex.stackblitz.io/",
       "repoUrl": "https://github.com/LadyVamp/angular-api-ex",
       "type": "Angular"
@@ -27,7 +27,7 @@
     {
       "title": "gas",
       "description": "Калькулятор расхода газа для горелки",
-      "imageUrl": "./assets/img/projects-covers/gas.png",
+      "imageUrl": "./assets/img/projects/gas.png",
       "demoUrl": "https://ladyvamp.github.io/projects/gas/index.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/gas",
       "type": "JavaScript"
@@ -35,7 +35,7 @@
     {
       "title": "pass_gen",
       "description": "Генератор паролей",
-      "imageUrl": "./assets/img/projects-covers/pass_gen.png",
+      "imageUrl": "./assets/img/projects/pass_gen.png",
       "demoUrl": "https://ladyvamp.github.io/projects/pass_gen/index.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/pass_gen",
       "type": "JavaScript"
@@ -43,7 +43,7 @@
     {
       "title": "adyakova",
       "description": "Портфолио художницы Анастасии Дьяковой",
-      "imageUrl": "./assets/img/projects-covers/adyakova.png",
+      "imageUrl": "./assets/img/projects/adyakova.png",
       "demoUrl": "https://ladyvamp.github.io/projects/adyakova/index.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/adyakova",
       "type": "Other"
@@ -51,7 +51,7 @@
     {
       "title": "nashestvie",
       "description": "Обратный отсчет до фестиваля Нашествие 2021 + архив цен",
-      "imageUrl": "./assets/img/projects-covers/nashestvie.png",
+      "imageUrl": "./assets/img/projects/nashestvie.png",
       "demoUrl": "https://ladyvamp.github.io/projects/nashestvie/countdown.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/nashestvie/countdown",
       "type": "Other"
@@ -59,7 +59,7 @@
     {
       "title": "legends-of-mountains",
       "description": "Велопоход ЛЕГЕНДЫ ГОР",
-      "imageUrl": "./assets/img/projects-covers/legends-of-mountains.png",
+      "imageUrl": "./assets/img/projects/legends-of-mountains.png",
       "demoUrl": "https://ladyvamp.github.io/projects/legends-of-mountains/countdown.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/legends-of-mountains/countdown",
       "type": "Other"
