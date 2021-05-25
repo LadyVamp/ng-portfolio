@@ -14,10 +14,10 @@
         <img mat-card-image [src]="project.imageUrl" alt=""></a>
       <mat-card-header>
         <mat-card-title>{{project.title}}</mat-card-title>
+        <mat-card-subtitle>{{project.type}}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <p>{{project.description}}</p>
-        <p>{{project.type}}</p>
       </mat-card-content>
       <mat-card-actions fxLayoutAlign="space-between center">
         <a mat-raised-button href="{{project.repoUrl}}" target="_blank">
