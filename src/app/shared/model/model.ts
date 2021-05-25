@@ -10,3 +10,7 @@ export interface Project {
   repoUrl: string;
   type: string;
 }
+export interface Skill {
+  title: string;
+  imageUrl: string;
+}
