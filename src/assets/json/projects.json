@@ -65,11 +65,11 @@
       "type": "Other"
     },
     {
-      "title": "title",
-      "description": "description",
+      "title": "templateCard",
+      "description": "templateCard",
       "imageUrl": "./assets/img/placeholder-image.png",
-      "demoUrl": "https://stackblitz.com/",
-      "repoUrl": "https://github.com/",
+      "demoUrl": "",
+      "repoUrl": "",
       "type": "Other"
     }
   ]

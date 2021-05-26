@@ -3,7 +3,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { Project } from '@shared/model/model';
 import { ProjectService } from '@services/project.service';
-
+import { map, tap } from 'rxjs/operators'
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -27,9 +27,15 @@ export class ProjectsComponent implements OnInit {
 
   loadData(): void {
     this.isLoading = true;
-    this.projectService.getProjects().pipe()
-      .subscribe(res => {
-        this.projects = this.filteredProjects = res.data;
+    this.projectService.getProjects()
+      .pipe(
+        tap(res => console.log('projects %o', res.data)),
+        map(res => res.data
+          .filter(p => p.title !== 'templateCard')
+        )
+      )
+      .subscribe(data => {
+        this.projects = this.filteredProjects = data;
         this.types = this.getUniqueTypes();
         this.isLoading = false;
       });
