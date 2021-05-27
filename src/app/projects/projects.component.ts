@@ -3,7 +3,8 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { Project } from '@shared/model/model';
 import { ProjectService } from '@services/project.service';
-import { map, tap } from 'rxjs/operators'
+import { map, tap } from 'rxjs/operators';
+
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
