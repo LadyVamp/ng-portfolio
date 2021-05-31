@@ -21,16 +21,16 @@ export class ContentHeaderComponent implements OnInit {
     moment.locale('ru');
 
     if (end === 'now') {
-      return (moment(start).format('MMMM YYYY') + ' — по настоящее время');
+      return (moment(new Date(start)).format('MMMM YYYY') + ' — по настоящее время');
     } else {
-      return (moment(start).format('MMMM YYYY') + ' — ' + moment(end).format('MMMM YYYY'));
+      return (moment(new Date(start)).format('MMMM YYYY') + ' — ' + moment(new Date(end)).format('MMMM YYYY'));
     }
   }
 
   differenceBetweenDates(start: string, end: string): string {
     let endDate;
-    const startDate = moment(start);
-    end === 'now' ? endDate = moment() : endDate = moment(end);
+    const startDate = moment(new Date(start));
+    end === 'now' ? endDate = moment() : endDate = moment(new Date(end));
     const diff = endDate.diff(startDate, 'month');
     const y = Math.floor(diff / 12);
     const m = diff % 12;
