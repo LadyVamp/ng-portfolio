@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import * as dayjs from 'dayjs';
+import 'dayjs/locale/ru';
 
 @Component({
   selector: 'app-content-header',
