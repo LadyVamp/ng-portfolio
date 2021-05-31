@@ -28,21 +28,16 @@ export class ContentHeaderComponent implements OnInit {
   }
 
   differenceBetweenDates(start: string, end: string): string {
+    let endDate;
     const startDate = moment(start);
-    const endDate = moment(end);
-
-    if (end === 'now') {
-      const diff = moment().diff(startDate, 'month');
-      return diff + ' месяцев';
+    end === 'now' ? endDate = moment() : endDate = moment(end);
+    const diff = endDate.diff(startDate, 'month');
+    const y = Math.floor(diff / 12);
+    const m = diff % 12;
+    if (y === 0) {
+      return m + ' месяцев';
     } else {
-      const diff = endDate.diff(startDate, 'month');
-      if (diff < 12) {
-        return diff + ' месяцев';
-      } else {
-        const y = Math.ceil(diff / 12);
-        const m = diff % 12;
-        return (y + ' года ' + m + ' месяцев');
-      }
+      return (y + ' год ' + m + ' месяцев');
     }
   }
 
