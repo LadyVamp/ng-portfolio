@@ -1,6 +1,6 @@
 {
   "name": "ng-portfolio",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -29,8 +29,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "angular-cli-ghpages": "^1.0.0-rc.1",
     "angular-svg-icon": "^12.0.0",
+    "dayjs": "^1.10.5",
     "firebase": "^7.0 || ^8.0",
-    "moment": "^2.29.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"

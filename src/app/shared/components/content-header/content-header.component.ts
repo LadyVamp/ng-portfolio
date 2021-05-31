@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, ContentChild, TemplateRef, ElementRef } from '@angular/core';
-import * as moment from 'moment';
+import { Component, OnInit, Input } from '@angular/core';
+import * as dayjs from 'dayjs';
 
 @Component({
   selector: 'app-content-header',
@@ -18,19 +18,19 @@ export class ContentHeaderComponent implements OnInit {
   }
 
   formatDates(start: string, end: string): string {
-    moment.locale('ru');
+    dayjs.locale('ru');
 
     if (end === 'now') {
-      return (moment(new Date(start)).format('MMMM YYYY') + ' — по настоящее время');
+      return (dayjs(start).format('MMMM YYYY') + ' — по настоящее время');
     } else {
-      return (moment(new Date(start)).format('MMMM YYYY') + ' — ' + moment(new Date(end)).format('MMMM YYYY'));
+      return (dayjs(start).format('MMMM YYYY') + ' — ' + dayjs(end).format('MMMM YYYY'));
     }
   }
 
   differenceBetweenDates(start: string, end: string): string {
     let endDate;
-    const startDate = moment(new Date(start));
-    end === 'now' ? endDate = moment() : endDate = moment(new Date(end));
+    const startDate = dayjs(start);
+    end === 'now' ? endDate = dayjs() : endDate = dayjs(end);
     const diff = endDate.diff(startDate, 'month');
     const y = Math.floor(diff / 12);
     const m = diff % 12;
