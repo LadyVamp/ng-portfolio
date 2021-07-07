@@ -37,21 +37,20 @@ export class ContentHeaderComponent implements OnInit {
     const m = diff % 12;
     if (y === 0) {
       return m + this.monthEnding(m);
-    } 
-    else if (m === 0) {
-      return (y + ' год ');
+    } else if (m === 0) {
+      return (y + ' год');
     } else {
       return (y + ' год ' + m + this.monthEnding(m));
     }
   }
 
   monthEnding(count: number): string {
-   if (count === 0) return '';
-   if (count === 1) return 'месяц';
-   if (count >= 1 && count <= 4) return 'месяца';
-   else {
-     return ' месяцев';
-   }
+    if (count === 0) return '';
+    if (count === 1) return 'месяц';
+    if (count >= 1 && count <= 4) return ' месяца';
+    else {
+      return ' месяцев';
+    }
   }
 
 }
