@@ -65,14 +65,6 @@
       "type": "Other"
     },
     {
-      "title": "vue-test-form",
-      "description": "Нубский проект на Vue.js",
-      "imageUrl": "./assets/img/projects/vue-test-form.png",
-      "demoUrl": "https://ladyvamp.github.io/vue-test-form/",
-      "repoUrl": "https://github.com/LadyVamp/vue-test-form",
-      "type": "Vue.js"
-    },
-    {
       "title": "templateCard",
       "description": "templateCard",
       "imageUrl": "./assets/img/placeholder-image.png",
