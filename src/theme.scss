@@ -41,6 +41,9 @@ $light-theme: mat-light-theme(mat-palette($mat-blue), mat-palette($mat-yellow), 
   h6 {
     color: $primary;
   }
+  h4 {
+    font-size: 14px;
+  }
   .mat-toolbar {
     background-color: $primary;
     color: white;
@@ -99,6 +102,9 @@ $dark-theme: mat-dark-theme(mat-palette($mat-indigo), mat-palette($mat-purple), 
   h5,
   h6 {
     color: $secondary;
+  }
+  h4 {
+    font-size: 14px;
   }
   .mat-toolbar {
     background-color: $primary;
