@@ -46,7 +46,7 @@ export class ContentHeaderComponent implements OnInit {
 
   monthEnding(count: number): string {
     if (count === 0) return '';
-    if (count === 1) return 'месяц';
+    if (count === 1) return ' месяц';
     if (count >= 1 && count <= 4) return ' месяца';
     else {
       return ' месяцев';

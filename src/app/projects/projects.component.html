@@ -14,7 +14,8 @@
         <img mat-card-image [src]="project.imageUrl" alt=""></a>
       <mat-card-header>
         <mat-card-title>{{project.title}}</mat-card-title>
-        <mat-card-subtitle>{{project.type}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="project.technologies">{{project.technologies}}</mat-card-subtitle>
+        <mat-card-subtitle *ngIf="!project.technologies">{{project.type}}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <p>{{project.description}}</p>
@@ -23,7 +24,7 @@
         <a mat-raised-button href="{{project.repoUrl}}" target="_blank">
           <fa-icon [icon]="faGithub"></fa-icon> Code
         </a>
-        <a mat-raised-button href="{{project.demoUrl}}" target="_blank">
+        <a *ngIf="project.demoUrl" mat-raised-button href="{{project.demoUrl}}" target="_blank">
           <fa-icon [icon]="faGlobe"></fa-icon> Demo
         </a>
       </mat-card-actions>

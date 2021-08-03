@@ -9,6 +9,7 @@ export interface Project {
   demoUrl: string;
   repoUrl: string;
   type: string;
+  technologies?: string;
 }
 export interface Skill {
   title: string;
