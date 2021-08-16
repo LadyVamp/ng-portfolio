@@ -48,6 +48,10 @@ export class SkillsComponent implements OnInit {
       title: 'Angular',
       imageUrl: './assets/img/skills/angular.svg',
     },
+    {
+      title: 'Vue.js',
+      imageUrl: './assets/img/skills/vuejs.svg',
+    },
   ];
 
   constructor() {
