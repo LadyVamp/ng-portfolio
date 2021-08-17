@@ -79,10 +79,10 @@
       "title": "vue-my-hikes",
       "description": "База треков моих походов на Vue.js",
       "imageUrl": "./assets/img/projects/vue-my-hikes.png",
-      "demoUrl": null,
+      "demoUrl": "https://ladyvamp.github.io/vue-my-hikes/",
       "repoUrl": "https://github.com/LadyVamp/vue-my-hikes",
       "type": "Vue.js",
-      "technologies": "Vue 2, Vuetify, Vue Router"
+      "technologies": "Vue 2, Vuetify, Vue Router, Vuex"
     },
     {
       "title": "templateCard",
