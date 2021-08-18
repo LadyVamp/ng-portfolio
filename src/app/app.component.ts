@@ -33,7 +33,7 @@ export class AppComponent {
   currentTheme = '';
   @HostBinding('class') componentCssClass: string;
 
-  constructor(private breakpointObserver: BreakpointObserver, private router: Router, public overlayContainer: OverlayContainer) {
+  constructor(private breakpointObserver: BreakpointObserver, public router: Router, public overlayContainer: OverlayContainer) {
     this.router.events.pipe(filter(event => event instanceof NavigationStart))
       .subscribe(() => {
         if (this.isHandset) {
@@ -42,7 +42,7 @@ export class AppComponent {
         }
       });
 
-    localStorage.getItem('theme') === 'dark-theme' ? this.setTheme('dark-theme') : this.setTheme('light-theme');
+    localStorage.getItem('theme') === 'dark-theme' ? this.setTheme('dark-theme') : this.setTheme('light-theme');    
   }
 
   setTheme(theme: string): void {

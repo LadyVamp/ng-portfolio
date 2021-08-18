@@ -16,6 +16,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { ContentHeaderComponent } from './shared/components/content-header/content-header.component';
 import { SkillsComponent } from './skills/skills.component';
+import { HeaderBannerComponent } from './header-banner/header-banner.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { SkillsComponent } from './skills/skills.component';
     ContactsComponent,
     ContentHeaderComponent,
     SkillsComponent,
+    HeaderBannerComponent,
   ],
   imports: [
     BrowserModule,

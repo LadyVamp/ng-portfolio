@@ -3,11 +3,11 @@
     [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['/home']" routerLinkActive="router-link-active">Home</a>
-      <a mat-list-item [routerLink]="['/projects']" routerLinkActive="router-link-active">Projects</a>
-      <a mat-list-item [routerLink]="['/resume']" routerLinkActive="router-link-active">Resume</a>
-      <a mat-list-item [routerLink]="['/skills']" routerLinkActive="router-link-active">Skills</a>
-      <a mat-list-item [routerLink]="['/contacts']" routerLinkActive="router-link-active">Contacts</a>
+      <a mat-list-item [routerLink]="['/home']" routerLinkActive="router-link-active">Главная</a>
+      <a mat-list-item [routerLink]="['/projects']" routerLinkActive="router-link-active">Проекты</a>
+      <a mat-list-item [routerLink]="['/resume']" routerLinkActive="router-link-active">Резюме</a>
+      <a mat-list-item [routerLink]="['/skills']" routerLinkActive="router-link-active">Навыки</a>
+      <a mat-list-item [routerLink]="['/contacts']" routerLinkActive="router-link-active">Контакты</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content class="wrapper">
@@ -26,6 +26,11 @@
         </button>
       </div>
     </mat-toolbar>
+
+    <div *ngIf="router.url === '/home'">
+      <app-header-banner></app-header-banner>
+    </div>
+
     <div class="content">
       <router-outlet></router-outlet>
     </div>
