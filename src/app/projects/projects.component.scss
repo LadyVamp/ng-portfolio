@@ -19,6 +19,12 @@
 
 .btn-group {
   .mat-raised-button {
-    margin: 0 1px;
+    margin: 1px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .btn-group {
+    flex-wrap: wrap;
   }
 }
