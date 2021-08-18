@@ -30,7 +30,6 @@ export class ProjectsComponent implements OnInit {
     this.isLoading = true;
     this.projectService.getProjects()
       .pipe(
-        tap(res => console.log('projects %o', res.data)),
         map(res => res.data
           .filter(p => p.title !== 'templateCard')
         )

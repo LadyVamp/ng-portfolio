@@ -6,6 +6,7 @@ import { Router, NavigationStart } from '@angular/router';
 import { MatDrawerContainer } from '@angular/material/sidenav';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { version } from '../../package.json';
+import { faHome, faRocket, faBriefcase, faWrench, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,12 @@ import { version } from '../../package.json';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  faHome = faHome;
+  faRocket = faRocket;
+  faBriefcase = faBriefcase;
+  faWrench = faWrench;
+  faEnvelope = faEnvelope;
+
   version: string = version;
   title = 'ng-portfolio';
   isHandset = false;
