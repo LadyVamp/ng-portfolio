@@ -6,7 +6,7 @@
       "imageUrl": "./assets/img/projects/ladyvamp.github.io.png",
       "demoUrl": "https://ladyvamp.github.io/",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io",
-      "type": "Other"
+      "type": "Landing"
     },
     {
       "title": "github-angular-track-filter",
@@ -48,23 +48,23 @@
       "imageUrl": "./assets/img/projects/adyakova.png",
       "demoUrl": "https://ladyvamp.github.io/projects/adyakova/index.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/adyakova",
-      "type": "Other"
+      "type": "Landing"
     },
     {
       "title": "nashestvie",
       "description": "Обратный отсчет до фестиваля Нашествие 2021 + архив цен",
       "imageUrl": "./assets/img/projects/nashestvie.png",
       "demoUrl": "https://ladyvamp.github.io/projects/nashestvie/countdown.html",
-      "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/nashestvie/countdown",
-      "type": "Other"
+      "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/nashestvie/",
+      "type": "Landing"
     },
     {
       "title": "legends-of-mountains",
       "description": "Велопоход ЛЕГЕНДЫ ГОР",
       "imageUrl": "./assets/img/projects/legends-of-mountains.png",
       "demoUrl": "https://ladyvamp.github.io/projects/legends-of-mountains/countdown.html",
-      "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/legends-of-mountains/countdown",
-      "type": "Other"
+      "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/legends-of-mountains/",
+      "type": "Landing"
     },
     {
       "title": "vue-test-form",
@@ -90,7 +90,7 @@
       "imageUrl": "./assets/img/placeholder-image.png",
       "demoUrl": "",
       "repoUrl": "",
-      "type": "Other"
+      "type": "Landing"
     }
   ]
 }
