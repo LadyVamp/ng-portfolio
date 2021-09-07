@@ -129,11 +129,7 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {
-            "baseHref": "https://ladyvamp.github.io/ng-portfolio/",
-            "name": "ladyvamp",
-            "email": "ladyvamp666@gmail.com"
-          }
+          "options": {}
         }
       }
     }
