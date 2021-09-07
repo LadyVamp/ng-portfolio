@@ -44,3 +44,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# из него hr достают email и спамят на почту
+angular.json
