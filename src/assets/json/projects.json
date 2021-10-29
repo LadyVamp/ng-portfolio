@@ -87,11 +87,11 @@
     {
       "title": "vue-my-cookbook",
       "description": "Кулинарная книга",
-      "imageUrl": "./assets/img/placeholder-image.png",
-      "demoUrl": null,
+      "imageUrl": "./assets/img/projects/vue-my-cookbook.png",
+      "demoUrl": "https://ladyvamp.github.io/vue-my-cookbook/",
       "repoUrl": "https://github.com/LadyVamp/vue-my-cookbook",
       "type": "Vue.js",
-      "technologies": "Vue 2, Vuetify, Vue Router"
+      "technologies": "Vue 2, Vuetify, Vue Router, Vuex"
     },
     {
       "title": "templateCard",
