@@ -77,7 +77,7 @@
     },
     {
       "title": "vue-my-hikes",
-      "description": "База треков моих походов на Vue.js",
+      "description": "База треков моих походов на Vue.js + калькулятор расхода газа для горелки",
       "imageUrl": "./assets/img/projects/vue-my-hikes.png",
       "demoUrl": "https://ladyvamp.github.io/vue-my-hikes/",
       "repoUrl": "https://github.com/LadyVamp/vue-my-hikes",
