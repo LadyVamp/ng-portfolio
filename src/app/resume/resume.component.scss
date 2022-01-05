@@ -4,3 +4,20 @@ h4 {
 .job {
     margin-bottom: 40px;
 }
+
+.gallery {
+    max-width: 800px;
+    overflow-x: auto;
+    margin: 30px 0;
+    img {
+        width: 100px;
+    }
+}
+
+.counter {
+    color: navy;
+    user-select: none;
+    &:hover {
+        cursor: pointer;
+    }
+}

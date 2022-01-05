@@ -34,6 +34,13 @@
       <li>Исправление багов</li>
     </ul>
   </div>
+  <div *ngIf="counter === 5" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="gallery">
+    <div *ngFor="let image of vskImages">
+      <a href="{{image.url}}" title="{{image.title}}" target="_blank">
+        <img src="{{image.url}}" alt="">
+      </a>
+    </div>
+  </div>
 </app-content-header>
 
 <app-content-header [dates]="['2018/09', '2020/07']" title="Банк Русский Стандарт" subtitle="Frontend-разработчик"
@@ -46,7 +53,7 @@
       <li>Разработка интерфейса сервиса распознавания лиц (Angular 7)</li>
       <li>Верстка лендинга "<a href="https://www.rsb.ru/check/" target="_blank">Чек удачи</a>"</li>
     </ul>
-    <h4>Приложение для начисления кэшбэка</h4>
+    <h4>Приложение для начисления кэшбэка Cashoff</h4>
     <ul>
       <li>Проектирование интерфейса</li>
       <li>Frontend-разработка (Angular 7)</li>
@@ -70,6 +77,13 @@
       <li>Прототипирование интерфейса</li>
       <li>Разработка приложения (Angular 8 + Angular Material)</li>
     </ul>
+    <div *ngIf="counter === 5" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="gallery">
+      <div *ngFor="let image of rsbImages">
+        <a href="{{image.web ? image.web : image.url}}" title="{{image.title}}" target="_blank">
+          <img src="{{image.url}}" alt="">
+        </a>
+      </div>
+    </div>
   </div>
 </app-content-header>
 
@@ -83,3 +97,7 @@
     </p>
   </div>
 </app-content-header>
+
+<div *ngIf="counter < 5" class="counter" (click)="increment()">
+  <p fxLayoutAlign="end">v{{version}}{{counter}}</p>
+</div>
