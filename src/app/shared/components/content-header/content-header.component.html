@@ -1,5 +1,5 @@
 <div fxLayout="row" fxLayoutAlign="start start">
-  <div fxFlex="15" fxHide.xs fxFlex.lt-lg="25">
+  <div fxFlex="20" fxHide.xs fxFlex.lt-lg="25">
     <p>{{formatDates(dates[0], dates[1])}}</p>
     <p *ngIf="!title.includes('МГТУ')" class="period">{{differenceBetweenDates(dates[0], dates[1])}}</p>
   </div>
