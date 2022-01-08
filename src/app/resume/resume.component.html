@@ -99,5 +99,8 @@
 </app-content-header>
 
 <div *ngIf="counter < 5" class="counter" (click)="increment()">
-  <p fxLayoutAlign="end">v{{version}}{{counter}}</p>
+  <p fxLayoutAlign="end">
+    <mat-icon color="primary">view_carousel</mat-icon>
+    <span *ngIf="counter !== 0">{{counter}}</span>
+  </p>
 </div>

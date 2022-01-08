@@ -69,6 +69,10 @@ $light-theme: mat-light-theme(mat-palette($mat-blue), mat-palette($mat-yellow), 
   .snackbar-error {
     background-color: $warn;
   }
+
+  .mat-icon.mat-primary {
+    color:  $primary;
+  }
 }
 
 /*

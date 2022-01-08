@@ -15,8 +15,8 @@ h4 {
 }
 
 .counter {
-    color: navy;
     user-select: none;
+    font-size: 12px;
     &:hover {
         cursor: pointer;
     }

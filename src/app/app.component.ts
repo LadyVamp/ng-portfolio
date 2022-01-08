@@ -47,7 +47,6 @@ export class AppComponent {
       .subscribe(() => {
         if (this.isHandset) {
           this.drawer.close();
-          console.log('closed');
         }
       });
 
