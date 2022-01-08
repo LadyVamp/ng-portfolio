@@ -40,6 +40,8 @@ export class AppComponent {
   currentTheme = '';
   @HostBinding('class') componentCssClass: string;
 
+  currentYear: number = new Date().getFullYear();
+
   constructor(private breakpointObserver: BreakpointObserver, public router: Router, public overlayContainer: OverlayContainer) {
     this.router.events.pipe(filter(event => event instanceof NavigationStart))
       .subscribe(() => {
