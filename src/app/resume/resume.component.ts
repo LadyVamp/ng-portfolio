@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { version } from '../../../package.json';
+import * as moment from 'moment'; 
 
 @Component({
   selector: 'app-resume',
@@ -49,6 +50,15 @@ export class ResumeComponent implements OnInit {
 
   increment() {
     this.counter++;
+  }
+
+  calculateWorkExperience() {
+    const DIPLOMA_PAUSE = 1;
+    const start_date = moment('2016-09');
+    const end_date = moment();
+    const duration = moment.duration(end_date.diff(start_date));
+
+    return (duration.years() - DIPLOMA_PAUSE) + ' года ' +  duration.months() + ' месяцев';
   }
 
 }
