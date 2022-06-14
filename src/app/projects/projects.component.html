@@ -14,9 +14,11 @@
         <img mat-card-image [src]="project.imageUrl" alt=""></a>
       <mat-card-header>
         <mat-card-title>{{project.title}}</mat-card-title>
-        <mat-card-subtitle *ngIf="project.technologies">{{project.technologies}}</mat-card-subtitle>
-        <mat-card-subtitle>{{project.year}}</mat-card-subtitle>
-        <mat-card-subtitle *ngIf="!project.technologies">{{project.type}}</mat-card-subtitle>
+        <mat-card-subtitle>
+          <span *ngIf="project.technologies">{{project.technologies}}</span>
+          <span *ngIf="!project.technologies">{{project.type}}</span>
+          &#183;&nbsp;{{project.year}}
+        </mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
         <p>{{project.description}}</p>
