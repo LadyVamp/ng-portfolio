@@ -6,7 +6,8 @@
       "imageUrl": "./assets/img/projects/ladyvamp.github.io.png",
       "demoUrl": "https://ladyvamp.github.io/",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io",
-      "type": "Landing"
+      "type": "Landing",
+      "year": "2017"
     },
     {
       "title": "github-angular-track-filter",
@@ -15,7 +16,8 @@
       "demoUrl": "https://github-angular-track-filter.stackblitz.io/",
       "repoUrl": "https://github.com/LadyVamp/github-angular-track-filter",
       "type": "Angular",
-      "technologies": "Angular 8, Angular Material"
+      "technologies": "Angular 8, Angular Material",
+      "year": "2019"
     },
     {
       "title": "angular-api-ex",
@@ -24,7 +26,8 @@
       "demoUrl": "https://angular-api-ex.stackblitz.io/",
       "repoUrl": "https://github.com/LadyVamp/angular-api-ex",
       "type": "Angular",
-      "technologies": "Angular 8"
+      "technologies": "Angular 8",
+      "year": "2020"
     },
     {
       "title": "gas",
@@ -32,7 +35,8 @@
       "imageUrl": "./assets/img/projects/gas.png",
       "demoUrl": "https://ladyvamp.github.io/projects/gas/index.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/gas",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "year": "2019"
     },
     {
       "title": "pass_gen",
@@ -40,7 +44,8 @@
       "imageUrl": "./assets/img/projects/pass_gen.png",
       "demoUrl": "https://ladyvamp.github.io/projects/pass_gen/index.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/pass_gen",
-      "type": "JavaScript"
+      "type": "JavaScript",
+      "year": "2018"
     },
     {
       "title": "adyakova",
@@ -48,7 +53,8 @@
       "imageUrl": "./assets/img/projects/adyakova.png",
       "demoUrl": "https://ladyvamp.github.io/projects/adyakova/index.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/adyakova",
-      "type": "Landing"
+      "type": "Landing",
+      "year": "2018"
     },
     {
       "title": "nashestvie",
@@ -56,7 +62,8 @@
       "imageUrl": "./assets/img/projects/nashestvie.png",
       "demoUrl": "https://ladyvamp.github.io/projects/nashestvie/countdown.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/nashestvie/",
-      "type": "Landing"
+      "type": "Landing",
+      "year": "2017"
     },
     {
       "title": "legends-of-mountains",
@@ -64,7 +71,8 @@
       "imageUrl": "./assets/img/projects/legends-of-mountains.png",
       "demoUrl": "https://ladyvamp.github.io/projects/legends-of-mountains/countdown.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/legends-of-mountains/",
-      "type": "Landing"
+      "type": "Landing",
+      "year": "2020"
     },
     {
       "title": "vue-test-form",
@@ -73,7 +81,8 @@
       "demoUrl": "https://ladyvamp.github.io/vue-test-form/",
       "repoUrl": "https://github.com/LadyVamp/vue-test-form",
       "type": "Vue.js",
-      "technologies": "Vue 2"
+      "technologies": "Vue 2",
+      "year": "2021"
     },
     {
       "title": "vue-my-hikes",
@@ -82,7 +91,8 @@
       "demoUrl": "https://ladyvamp.github.io/vue-my-hikes/",
       "repoUrl": "https://github.com/LadyVamp/vue-my-hikes",
       "type": "Vue.js",
-      "technologies": "Vue 2, Vuetify, Vue Router, Vuex"
+      "technologies": "Vue 2, Vuetify, Vue Router, Vuex",
+      "year": "2021"
     },
     {
       "title": "vue-my-cookbook",
@@ -91,7 +101,8 @@
       "demoUrl": "https://ladyvamp.github.io/vue-my-cookbook/",
       "repoUrl": "https://github.com/LadyVamp/vue-my-cookbook",
       "type": "Vue.js",
-      "technologies": "Vue 2, Vuetify, Vue Router, Vuex"
+      "technologies": "Vue 2, Vuetify, Vue Router, Vuex",
+      "year": "2021"
     },
     {
       "title": "templateCard",
@@ -99,7 +110,8 @@
       "imageUrl": "./assets/img/placeholder-image.png",
       "demoUrl": "",
       "repoUrl": "",
-      "type": "Landing"
+      "type": "Landing",
+      "year": ""
     }
   ]
 }
