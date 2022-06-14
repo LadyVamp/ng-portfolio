@@ -15,6 +15,7 @@
       <mat-card-header>
         <mat-card-title>{{project.title}}</mat-card-title>
         <mat-card-subtitle *ngIf="project.technologies">{{project.technologies}}</mat-card-subtitle>
+        <mat-card-subtitle>{{project.year}}</mat-card-subtitle>
         <mat-card-subtitle *ngIf="!project.technologies">{{project.type}}</mat-card-subtitle>
       </mat-card-header>
       <mat-card-content>
