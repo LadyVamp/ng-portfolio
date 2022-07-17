@@ -7,7 +7,7 @@
       "demoUrl": "https://ladyvamp.github.io/",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io",
       "type": "Landing",
-      "year": "2017"
+      "year": 2017
     },
     {
       "title": "github-angular-track-filter",
@@ -17,7 +17,7 @@
       "repoUrl": "https://github.com/LadyVamp/github-angular-track-filter",
       "type": "Angular",
       "technologies": "Angular 8, Angular Material",
-      "year": "2019"
+      "year": 2019
     },
     {
       "title": "angular-api-ex",
@@ -27,7 +27,7 @@
       "repoUrl": "https://github.com/LadyVamp/angular-api-ex",
       "type": "Angular",
       "technologies": "Angular 8",
-      "year": "2020"
+      "year": 2020
     },
     {
       "title": "gas",
@@ -36,7 +36,7 @@
       "demoUrl": "https://ladyvamp.github.io/projects/gas/index.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/gas",
       "type": "JavaScript",
-      "year": "2019"
+      "year": 2019
     },
     {
       "title": "pass_gen",
@@ -45,7 +45,7 @@
       "demoUrl": "https://ladyvamp.github.io/projects/pass_gen/index.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/pass_gen",
       "type": "JavaScript",
-      "year": "2018"
+      "year": 2018
     },
     {
       "title": "adyakova",
@@ -54,7 +54,7 @@
       "demoUrl": "https://ladyvamp.github.io/projects/adyakova/index.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/adyakova",
       "type": "Landing",
-      "year": "2018"
+      "year": 2018
     },
     {
       "title": "nashestvie",
@@ -63,7 +63,7 @@
       "demoUrl": "https://ladyvamp.github.io/projects/nashestvie/countdown.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/nashestvie/",
       "type": "Landing",
-      "year": "2017"
+      "year": 2017
     },
     {
       "title": "legends-of-mountains",
@@ -72,7 +72,7 @@
       "demoUrl": "https://ladyvamp.github.io/projects/legends-of-mountains/countdown.html",
       "repoUrl": "https://github.com/LadyVamp/ladyvamp.github.io/tree/master/projects/legends-of-mountains/",
       "type": "Landing",
-      "year": "2020"
+      "year": 2020
     },
     {
       "title": "vue-test-form",
@@ -82,7 +82,7 @@
       "repoUrl": "https://github.com/LadyVamp/vue-test-form",
       "type": "Vue.js",
       "technologies": "Vue 2",
-      "year": "2021"
+      "year": 2021
     },
     {
       "title": "vue-my-hikes",
@@ -92,7 +92,7 @@
       "repoUrl": "https://github.com/LadyVamp/vue-my-hikes",
       "type": "Vue.js",
       "technologies": "Vue 2, Vuetify, Vue Router, Vuex",
-      "year": "2021"
+      "year": 2021
     },
     {
       "title": "vue-my-cookbook",
@@ -102,7 +102,7 @@
       "repoUrl": "https://github.com/LadyVamp/vue-my-cookbook",
       "type": "Vue.js",
       "technologies": "Vue 2, Vuetify, Vue Router, Vuex",
-      "year": "2021"
+      "year": 2021
     },
     {
       "title": "templateCard",
