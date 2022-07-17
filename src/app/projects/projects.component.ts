@@ -35,7 +35,7 @@ export class ProjectsComponent implements OnInit {
         )
       )
       .subscribe(data => {
-        this.projects = this.filteredProjects = data;
+        this.projects = this.filteredProjects = data.sort((a,b) => b.year - a.year);
         this.types = this.getUniqueTypes();
         this.isLoading = false;
       });

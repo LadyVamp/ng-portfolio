@@ -10,7 +10,7 @@ export interface Project {
   repoUrl: string;
   type: string;
   technologies?: string;
-  year: string;
+  year: number;
 }
 export interface Skill {
   title: string;
