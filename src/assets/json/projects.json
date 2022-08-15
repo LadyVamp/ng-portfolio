@@ -105,6 +105,16 @@
       "year": 2021
     },
     {
+      "title": "search-assistant",
+      "description": "Помощник по поиску товаров в магазинах",
+      "imageUrl": "./assets/img/placeholder-image.png",
+      "demoUrl": "https://ladyvamp.github.io/search-assistant/",
+      "repoUrl": "https://github.com/LadyVamp/search-assistant",
+      "type": "Vue.js",
+      "technologies": "Vue 2, Vuetify, Vue Router",
+      "year": 2022
+    },
+    {
       "title": "templateCard",
       "description": "templateCard",
       "imageUrl": "./assets/img/placeholder-image.png",
