@@ -52,13 +52,17 @@ export class ResumeComponent implements OnInit {
     this.counter++;
   }
 
+  pluralize(count: number, words = ['месяц', 'месяца', 'месяцев']) {
+    const cases = [2, 0, 1, 1, 1, 2];
+    return count + ' ' + words[ (count % 100 > 4 && count % 100 < 20) ? 2 : cases[ Math.min(count % 10, 5)] ];
+  }
+
   calculateWorkExperience() {
     const DIPLOMA_PAUSE = 1;
     const start_date = moment('2016-09');
     const end_date = moment();
     const duration = moment.duration(end_date.diff(start_date));
-
-    return (duration.years() - DIPLOMA_PAUSE) + ' года ' +  duration.months() + ' месяцев';
+    return (duration.years() - DIPLOMA_PAUSE) + ' лет ' + this.pluralize(duration.months());
   }
 
 }
