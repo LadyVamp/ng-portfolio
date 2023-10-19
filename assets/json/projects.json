@@ -115,6 +115,16 @@
       "year": 2022
     },
     {
+      "title": "easy-recipes",
+      "description": "Новая кулинарная книга",
+      "imageUrl": "./assets/img/projects/placeholder-image.png",
+      "demoUrl": "",
+      "repoUrl": "https://github.com/LadyVamp/easy-recipes",
+      "type": "Vue.js",
+      "technologies": "Vue 3, Quasar, Vite, Vue Router",
+      "year": 2023
+    },
+    {
       "title": "templateCard",
       "description": "templateCard",
       "imageUrl": "./assets/img/projects/placeholder-image.png",
